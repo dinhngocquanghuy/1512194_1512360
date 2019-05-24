@@ -1,0 +1,36 @@
+extends main_view/homepage
+
+block inventory
+
+    div(id="inventory_area")
+
+    //
+        nav(id="sidebar")
+        div(class="sidebar-header")
+        h3 Bootstrap Sidebar
+        ul.main-menu
+        li.active
+            a.drag-drop(id="drag-button" href='#') Button
+        li
+            a.drag-drop(id="drag-image" href='#') Image
+        li
+            a.drag-drop(id="drag-text" href='#') Text
+        li
+            a.drag-drop(id="drag-form" href='#') Form
+        li
+            a(id="export" href='#') Export
+
+    script.
+        var inventory = new Section();
+        inventory.x = 0;
+        inventory.y = 0;
+        inventory.width = 100;
+        inventory.height = 100;
+        var btn = new Button();
+        inventory.content.push(btn);
+
+        //create inventory
+        var str = '<div id="inventory" style="width:' + inventory.width + 'px;height:' + inventory.height;
+        str += 'px;border-style:dashed;border-width:2px;position:absolute;' + '"></div>'
+        $("#inventory_area").html('');
+        $("#inventory_area").html(str);

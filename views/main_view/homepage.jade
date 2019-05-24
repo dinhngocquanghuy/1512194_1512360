@@ -2,6 +2,9 @@ extends ../layout
 
 block content
   div(id="main_window_area")
+
+  block inventory
+  
   script.
     //initial object main_window
     var main_window = new Windows();
@@ -24,3 +27,5 @@ block content
     mw.style.position = 'absolute';
     mw.style.left = 10 + 'px';
     mw.style.top = 10 + 'px';
+
+    

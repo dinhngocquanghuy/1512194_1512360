@@ -1,5 +1,4 @@
 (function ($) {
-
     $(document).on('blur', '.button-container #button', function (e) {
         e.preventDefault();
 
